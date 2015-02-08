@@ -1,0 +1,174 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body{
+  font-family: $font-famliy;
+  @include zero;
+  // Hides close button if there is no js
+  &.noscript .close-btn,
+    &.noscript .toggle-btn{
+    display: none;
+  }
+}
+
+header {
+  padding: 0 1em;
+  position: relative;
+}
+
+.toggle-btn{
+    position: absolute;
+    right: 1em;
+    top:0;
+}
+
+h2{
+    color: $green;
+}
+
+.navigation ul{
+    @include zero;
+    li{
+        list-style-type: none;
+        display: block;
+        a{
+            display: inline-block;
+            padding: .5em 1em;
+            text-align: center;
+            text-decoration: none;
+            color: $green;
+            border: 3px solid transparent;
+        }
+      
+    }
+}
+
+ul li a:hover {
+    transition:  .7s ease;
+    border-bottom: 3px solid $pink;
+}
+
+a:hover{
+    color: $pink;
+    transition:  .3s ease;
+}
+
+.toggle-btn,
+.close-btn{
+    color: $green;
+    height: 40px;
+    width: 40px;
+    i{
+        border: 5px solid $yellow;
+        padding: .5em;
+    }
+    span{
+        @include hide-text;
+    }
+}
+
+
+// Sliding NAvigation //
+
+@media only screen and(max-width: 60em){
+    // Page should move when nav opens
+    // Only time we will never use max-width
+
+.site-wrapper{
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100%;
+    .sliding-canvas{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateX(0);
+        @include ease(all, 300ms, ease-in-out);
+        
+       
+    
+    } // .sliding-canvas
+
+     &[data-state="slide-open"] .sliding-canvas{
+            transform: translateX(-100%);
+                // Allows nav to be greater than page height
+     }
+    
+    &[data-state="slide-open"]{
+        overflow: visible;
+    }
+    
+} // .site-wrapper
+   
+// Navigation Styles    
+.slide-menu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    right: -100%;
+    min-height: 600px;
+
+} 
+ 
+}
+// @media
+
+@media only screen and (min-width: 60em){
+    
+.toggle-btn,
+.close-btn{
+    display: none;
+}
+    .slide-menu{
+        position: static;
+        right: auto;
+        text-align: center;
+    
+    
+    }
+
+.navigation ul{
+    @include zero;
+    li{
+        list-style-type: none;
+        display: inline-block;
+        a{
+            display: inline-block;
+            padding: .5em 1em;
+            text-align: center;
+            text-decoration: none;
+            color: $green;
+            border: 3px solid transparent;
+        }
+      
+    }
+}
+    
+    ul li a:hover {
+    transition:  .7s ease;
+    border: 3px solid $pink;
+}
+
+
+}
+
