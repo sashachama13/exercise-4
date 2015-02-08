@@ -1,219 +1,159 @@
-@font-face {
-  font-family: 'push-menu-custom';
-  src: url('../font/push-menu-custom.eot?95902514');
-  src: url('../font/push-menu-custom.eot?95902514#iefix') format('embedded-opentype'), url('../font/push-menu-custom.woff?95902514') format('woff'), url('../font/push-menu-custom.ttf?95902514') format('truetype'), url('../font/push-menu-custom.svg?95902514#push-menu-custom') format('svg');
-  font-weight: normal;
-  font-style: normal; }
-
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'push-menu-custom';
-    src: url('../font/push-menu-custom.svg?95902514#push-menu-custom') format('svg');
-  }
-}
-*/
-/* line 22, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/push-menu-custom */
-[class^="i-"]:before, [class*=" i-"]:before {
-  font-family: "push-menu-custom";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: 0.2em;
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: 0.2em
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
-
-/* line 53, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/push-menu-custom */
-.i-menu:before {
-  content: '\e800'; }
-
-/* '' */
-/* line 54, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/push-menu-custom */
-.i-close:before {
-  content: '\e801'; }
-
-/* '' */
-@-moz-viewport {
-  width: device-width;
-  scale: 1; }
-
-@-ms-viewport {
-  width: device-width;
-  scale: 1; }
-
-@-o-viewport {
-  width: device-width;
-  scale: 1; }
-
-@-webkit-viewport {
-  width: device-width;
-  scale: 1; }
-
-@viewport {
-  width: device-width;
-  scale: 1; }
-
-/* line 7, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-html {
-  box-sizing: border-box;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%; }
-
-/* line 16, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-*, *:before, *:after {
-  box-sizing: inherit; }
-
-/* line 21, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0; }
-  /* line 26, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  body.noscript .close-btn, body.noscript .toggle-btn {
-    display: none; }
-
-/* line 31, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-header {
-  padding: 0 1em;
-  position: relative; }
-
-/* line 36, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-.toggle-btn {
-  position: absolute;
-  right: 1em;
-  top: 0; }
-
-/* line 42, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-h2 {
-  color: #79c610; }
-
-/* line 46, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-.navigation ul {
-  margin: 0;
-  padding: 0; }
-  /* line 48, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .navigation ul li {
-    list-style-type: none;
-    display: block; }
-    /* line 51, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-    .navigation ul li a {
-      display: inline-block;
-      padding: 0.5em 1em;
-      text-align: center;
-      text-decoration: none;
-      color: #79c610;
-      border: 3px solid transparent; }
-
-/* line 63, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-ul li a:hover {
-  transition: 0.7s ease;
-  border-bottom: 3px solid #DA70D6; }
-
-/* line 68, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-a:hover {
-  color: #DA70D6;
-  transition: 0.3s ease; }
-
-/* line 74, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-.toggle-btn, .close-btn {
-  color: #79c610;
-  height: 40px;
-  width: 40px; }
-  /* line 78, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .toggle-btn i, .close-btn i {
-    border: 5px solid #FF0;
-    padding: 0.5em; }
-  /* line 82, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .toggle-btn span, .close-btn span {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block; }
-
-@media only screen and (max-width: 60em) {
-  /* line 94, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .site-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    z-index: 100%; }
-    /* line 99, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-    .site-wrapper .sliding-canvas {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
-              transform: translateX(0);
-      transition: all 300ms ease-in-out; }
-    /* line 110, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-    .site-wrapper[data-state="slide-open"] .sliding-canvas {
-      -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
-              transform: translateX(-100%); }
-    /* line 115, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-    .site-wrapper[data-state="slide-open"] {
-      overflow: visible; }
-
-  /* line 122, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .slide-menu {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    right: -100%;
-    min-height: 600px; }
- }
-
-@media only screen and (min-width: 60em) {
-  /* line 139, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .toggle-btn, .close-btn {
-    display: none; }
-
-  /* line 142, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .slide-menu {
-    position: static;
-    right: auto;
-    text-align: center; }
-
-  /* line 150, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  .navigation ul {
+* {
     margin: 0;
-    padding: 0; }
-    /* line 152, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-    .navigation ul li {
-      list-style-type: none;
-      display: inline-block; }
-      /* line 155, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-      .navigation ul li a {
-        display: inline-block;
-        padding: 0.5em 1em;
-        text-align: center;
-        text-decoration: none;
-        color: #79c610;
-        border: 3px solid transparent; }
+    padding: 0;
+  	-moz-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
 
-  /* line 167, /Users/alexandrachama/Documents/School/Graphic Design 6/Web Dev/exercise-3/scss/components/main */
-  ul li a:hover {
-    transition: 0.7s ease;
-    border: 3px solid #DA70D6; }
- }
+	body {
+		width: 100%;
+		height: 100%;
+		font-family: "helvetica neue", helvetica, arial, sans-serif;
+		font-size: 13px;
+		text-align: center;
+		background: #333 url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png');
+	}
+
+	ul {
+		margin: 30px auto;
+		text-align: center;
+	}
+
+	li {
+		list-style: none;
+		position: relative;
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+
+	@-moz-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-webkit-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@-o-keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	@keyframes rotate {
+		0% {transform: rotate(0deg);}
+		100% {transform: rotate(-360deg);}
+	}
+
+	.round {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 30px;		
+		text-decoration: none;		
+		text-align: center;
+		font-size: 25px;		
+		text-shadow: 0 1px 0 rgba(255,255,255,.7);
+		letter-spacing: -.065em;
+		font-family: "Hammersmith One", sans-serif;		
+		-webkit-transition: all .25s ease-in-out;
+		-o-transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		transition: all .25s ease-in-out;
+		box-shadow: 2px 2px 7px rgba(0,0,0,.2);
+		border-radius: 300px;
+		z-index: 1;
+		border-width: 4px;
+		border-style: solid;
+	}
+
+	.round:hover {
+		width: 130%;
+		height: 130%;
+		left: -15%;
+		top: -15%;
+		font-size: 33px;
+		padding-top: 38px;
+		-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+		z-index: 2;
+		border-size: 10px;
+		-webkit-transform: rotate(-360deg);
+		-moz-transform: rotate(-360deg);
+		-o-transform: rotate(-360deg);
+		transform: rotate(-360deg);
+	}
+
+	a.red {
+		background-color: rgba(239,57,50,1);
+		color: rgba(133,32,28,1);
+		border-color: rgba(133,32,28,.2);
+	}
+
+	a.red:hover {
+		color: rgba(239,57,50,1);
+	}
+
+	a.green {
+		background-color: rgba(1,151,171,1);
+		color: rgba(0,63,71,1);
+		border-color: rgba(0,63,71,.2);
+	}
+
+	a.green:hover {
+		color: rgba(1,151,171,1);
+	}
+
+	a.yellow {
+		background-color: rgba(252,227,1,1);
+		color: rgba(153,38,0,1);
+		border-color: rgba(153,38,0,.2);
+	}
+
+	a.yellow:hover {
+		color: rgba(252,227,1,1);
+	}
+
+	.round span.round {
+		display: block;
+		opacity: 0;
+		-webkit-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
+		font-size: 1px;
+		border: none;
+		padding: 40% 20% 0 20%;
+		color: #fff;
+	}
+
+	.round span:hover {
+		opacity: .85;
+		font-size: 16px;
+		-webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		-o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
+		text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+	}
+
+	.green span {
+		background: rgba(0,63,71,.7);		
+	}
+
+	.red span {
+		background: rgba(133,32,28,.7);		
+	}
+
+	.yellow span {
+		background: rgba(161,145,0,.7);	
+
+	}
