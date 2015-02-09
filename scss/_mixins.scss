@@ -1,2 +1,11 @@
+@mixin zero{
+  margin: 0;
+  padding: 0;
+}
 
+@mixin max-height-width{
+  height:100%;
+  width:100%;
+}
 
+    
