@@ -15,17 +15,20 @@
 	}
 
 	ul {
-		margin: 30px auto;
+		margin: em;
 		text-align: center;
-        padding: 5em;
-	}
+        padding: 50em;
+        background: $light-grey;
+    }
 
 	li {
+        padding: 17em;
 		list-style: none;
 		position: relative;
 		display: block;
 		width: 100px;
 		height: 100px;
+        
 	}
 
 	@-moz-keyframes rotate {
@@ -54,16 +57,16 @@
 		left: 0;
 		top: 0;
 		@include max-height-width;
-		padding-top: 30px;		
+		padding-top: 130px;		
 		text-decoration: none;		
 		text-align: center;
-		font-size: 25px;		
+		font-size: 90px;		
 		letter-spacing: -.035em;
 		font-family: $font-family;		
-		-webkit-transition: all .35s ease-in-out;
-		-o-transition: all .35s ease-in-out;
-		-moz-transition: all .35s ease-in-out;
-		transition: all .25s ease-in-out;
+		-webkit-transition: all .5s ease-in-out;
+		-o-transition: all .5s ease-in-out;
+		-moz-transition: all .5s ease-in-out;
+		transition: all .5s ease-in-out;
 		border-radius: 300px;
 		z-index: 1;
 	}
@@ -73,8 +76,8 @@
 		height: 130%;
 		left: -15%;
 		top: -15%;
-		font-size: 33px;
-		padding-top: 38px;
+		font-size: 90px;
+		padding-top: 170px;
 		-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
 		-o-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
 		-moz-box-shadow: 5px 5px 10px rgba(0,0,0,.3);
@@ -124,7 +127,7 @@
 		-moz-transition: all .5s ease-in-out;
 		-o-transition: all .5s ease-in-out;
 		transition: all .5s ease-in-out;
-		font-size: 1px;
+		font-size: 60px;
 		border: none;
 		padding: 40% 20% 0 20%;
 		color: #fff;
@@ -132,11 +135,13 @@
 
 	.round span:hover {
 		opacity: .85;
-		font-size: 16px;
+		font-size: 60px;
+        padding-top: 160 px;
 		-webkit-text-shadow: 0 1px 1px rgba(0,0,0,.5);
 		-moz-text-shadow: 0 1px 1px rgba(0,0,0,.5);
 		-o-text-shadow: 0 1px 1px rgba(0,0,0,.5);
 		text-shadow: 0 1px 1px rgba(0,0,0,.5);	
+        text-align:center;
 	}
 
 	.green span {
